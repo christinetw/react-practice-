@@ -3,23 +3,24 @@ import { unstable_UserBlockingPriority } from "scheduler";
 import BlogList from "./BlogList";
 
 const Home = () => {
-const [blogs,setBlogs]=useState([
-  {title:'welcom party',body:'asdfg',author:'chiao',id:1},
-  {title:'welcom home',body:'qwert',author:'EE',id:2}
-]
-
-);
+const [blogs,setBlogs]=useState(null);
  
 const handleDelete =(id)=>{
 const newBlogs =blogs.filter(blog=>blog.id!==id);
 setBlogs(newBlogs);
 }
 useEffect (()=>{
-
+fetch('http://localhost:3000/blogs')
+.then(res=>{
+  return res.json();
+})
+.then(Data=>{
+setBlogs(Data)
+})
 },[]);
   return ( 
     <div className='home'>
-      <BlogList blogs={blogs} handleDelete={handleDelete}/>
+      {blogs &&<BlogList blogs={blogs} handleDelete={handleDelete}/>}
     </div>  
    );
 }

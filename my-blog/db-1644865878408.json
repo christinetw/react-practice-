@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "welcom party",
+      "body": "Nowadays, a blog is a regularly updated website or web page, and can either be used for personal use or to fulfill a business need.",
+      "author": "chiao",
+      "id": "1"
+    },
+    {
+      "title": "welcom home",
+      "body": "A lifestyle blog is a digital compilation of an author's personal interests, daily activities, or opinions on a subject. A lifestyle blog typically covers multiple hobbies or talents of the writer, rather than focusing on one subject alone",
+      "author": "EE",
+      "id": "2"
+    }
+  ]
+}
